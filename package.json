@@ -1,0 +1,27 @@
+{
+  "name": "algo-sort-comb",
+  "version": "1.0.0",
+  "description": "Comb sort algorithm",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bredele/algo-sort-comb.git"
+  },
+  "keywords": [
+    "sort",
+    "algorithm",
+    "comb"
+  ],
+  "author": "Olvier <olivier.wietrich@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/algo-sort-comb/issues"
+  },
+  "homepage": "https://github.com/bredele/algo-sort-comb#readme"
+}
