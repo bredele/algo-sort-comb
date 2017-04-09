@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/bredele/algo-sort-comb/issues"
   },
-  "homepage": "https://github.com/bredele/algo-sort-comb#readme"
+  "homepage": "https://github.com/bredele/algo-sort-comb#readme",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
 }
