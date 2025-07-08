@@ -6,20 +6,22 @@
  * @api public
  */
 
-module.exports = function(array, distance = ((prev, next) => prev < next)) {
-  array = array.slice(0)
-  var length = array.length
-  var gap = Math.floor(length / 1.3)
-  while (gap > 0) {
-    for(var i = 0; i + gap < length; i++) {
-      var small = array[i + gap]
-      var big = array[i]
-      if (distance(small, big)) {
-        array[i + gap] = big
-        array[i] = small
+module.exports = function (array, distance = (prev, next) => prev < next) {
+  const length = array.length;
+  let gap = Math.floor(length / 1.3);
+  let swapped = true;
+  while (gap > 1 || swapped) {
+    gap = Math.floor(gap / 1.3);
+    if (gap < 1) gap = 1;
+    swapped = false;
+    for (var i = 0; i + gap < length; i++) {
+      const right = array[i + gap];
+      const left = array[i];
+      if (distance(right, left)) {
+        [array[i], array[i + gap]] = [right, left];
+        swapped = true;
       }
     }
-    gap = Math.floor(gap/ 1.3)
   }
-  return array
-}
+  return array;
+};
